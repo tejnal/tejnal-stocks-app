@@ -1,0 +1,14 @@
+version: "3"
+services:
+    app:
+        build: ./tejnal-stock-exchange
+        restart: on-failure
+        env_file: ./.env
+        ports:
+            - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
+        volumes:
+            - .m2:/root/.m2
+        stdin_open: true
+        tty: true
+volumes:
+  db:
