@@ -17,7 +17,7 @@ Java, Spring boot, h2, docker, junit, powermock, maven, spring data jpa, spring 
   4) Documented Apis is using swagger library 
   
 # Assumptions were taken into count while read through requirements 
-  1) No more than one currency type order can be placed by user on a single day [ That means customer can only choose on currency type]
+  1) No more than one currency type order can be placed by user on a single day [ That means customer can only choose one currency type ]
   2) Tickers are static codes, mapped by TICKER_MAP data, and are usually provided/feed through Stock Exchanges API Integration.
   
 
@@ -46,12 +46,13 @@ Java, Spring boot, h2, docker, junit, powermock, maven, spring data jpa, spring 
    
 ##  Step6: Implement Service layer 
    1) The core logic of the business requirement is handled in this section, rest of the section just building block to support 
-   tht application. 
+   that application. 
+   
    2)In this service i have covered all the customer transaction use cases like createOrder, fetchOrder, fetchOrderSummary etc 
  
 ## Step7: Implement RestController 
-   1) Auth controller will be taken care of Authentication and Authorization user and admin group
-   2) part of the this assignment i have implemented three end point which named createOrder, fetchOrder, fetchOrderSummary
+   1) Auth controller will be taken care of Authentication and Authorization of user and admin group
+   2) part of the this assignment i have implemented three end points which named createOrder, fetchOrder, fetchOrderSummary
         
         
 ## Step 8: Dockerise The application   
@@ -71,8 +72,8 @@ Java, Spring boot, h2, docker, junit, powermock, maven, spring data jpa, spring 
 
 # How to run application 
  •	Execute/Run the application as Spring Boot application, or via maven using [mvn spring-boot:run]
- •	Application is also enriched with docker features and can be run as an independent containerized solution using [docker-compose up].
- •	App is currently configured to run on port 2022, however it can be changed in ‘application.properties’.
+ •	Application is also enriched with docker features and can be run as an independent containerized solution using [docker-compose up]
+ •	App is currently configured to run on port 2022, however it can be changed in ‘application.properties’
  
  •	It uses internally H2 database, however, can be switched to any database by changing the drivers in properties file.
  Username -> sa
@@ -86,7 +87,7 @@ Java, Spring boot, h2, docker, junit, powermock, maven, spring data jpa, spring 
  JDBC URL -> jdbc:h2:mem:testdb
  H2-Console URL -> [http://localhost:2022/order-book/h2-console]
  
- •	Application can be switched from ‘dev’ to ‘test’ profile by changing the value of ‘spring.profiles.active’ property in application.properties file.
+ •	Application can be switched from ‘dev’ to ‘test’ profile by changing the value of ‘spring.profiles.active’ property in application.properties file
  
  •	Swagger Documentation is also enabled (only for dev profile) for firing the APIs on leisure, which can be access at [http://localhost:2022/bet-master/swagger-ui/#/]
 
